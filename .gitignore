@@ -3,3 +3,4 @@ main.*
 publications.*
 !publications.bib
 sections/texput.log
+session
