@@ -2,5 +2,6 @@ main.*
 !main.tex
 publications.*
 !publications.bib
+!publications.tex
 sections/texput.log
 *session
