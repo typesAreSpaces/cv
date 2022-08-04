@@ -3,5 +3,7 @@ main.*
 publications.*
 !publications.bib
 !publications.tex
+software.*
+!software.tex
 sections/texput.log
 *session
