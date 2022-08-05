@@ -1,7 +1,19 @@
-\documentclass[10pt]{article}
-\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\documentclass[letterpaper,11pt]{article}
+
+% Choose bibliography style for formatting list of publications
+%\usepackage[style=ieee,url=false,doi=false,maxbibnames=99,sorting=ydnt,dashed=false]{biblatex}
+
+% Choose theme, e.g. black, RedViolet, ForestGreen, MidnightBlue
+\def\theme{MidnightBlue}
+
+% More predefined colors can be found in 
+% https://en.wikibooks.org/wiki/LaTeX/Colors
+% Example photograph taken from Wikimedia Commons
+% https://commons.wikimedia.org/wiki/File:Kiara_Krit_passport.jpg
+
+\usepackage{simplecv}
 \usepackage{multibib}
-\usepackage{hyperref}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
 \usepackage{import}
 \usepackage{xpatch}
 \makeatletter
@@ -13,31 +25,95 @@
   }
 \makeatother
 
+\boldname{Castellanos Joo}{Jose Abel}{J.A.}
+
 \newcommand{\grob}{Gr{\"o}bner }
 \newcites{publications}{Publications}
 
-\author{2700 Campus Blvd NE UNM SRC 1385\\
-Albuquerque, NM 87106\\
-jabelcastellanosjoo@unm.edu}
-\title{Jose Abel Castellanos Joo}
-\date{}
-
 \begin{document}
 
-\maketitle
+% Heading
+\headinginline{Jos\'e Abel Castellanos Joo}{
+    Website: \website{cs.unm.edu/~jose.castellanosjoo} \\ 
+    Email: \email{jabelcastellanosjoo@unm.edu} \\
+    LinkedIn: \linkedin{joseabelcj} \\
+    GitHub: \github{typesAreSpaces}
+}
 
-\import{sections}{personal-statement}
-\import{sections}{education}
-\import{sections}{work-experience}
-\import{sections}{publications}
-\import{sections}{talks}
-\import{sections}{software}
-\import{sections}{workshops}
-\import{sections}{skills}
-\import{sections}{teaching}
-\import{sections}{reviewer-work}
-\import{sections}{scholarships}
-\import{sections}{societies}
-\import{sections}{extra}
+% \headingphoto{Name Surname}{
+%     Website: \website{example.com} \\ 
+%     Email: \email{example@example.edu} \\
+%     LinkedIn: \linkedin{name-surname} \\
+%     GitHub: \github{example}
+% }{photo.jpg}
+
+\import{sections/}{personal-statement.tex}
+\import{sections/}{education.tex}
+\import{sections/}{work-experience.tex}
+
+\pagebreak
+
+\import{sections/}{publications.tex}
+\import{sections/}{teaching.tex}
+\sidebyside
+    {\import{sections/}{skills.tex}}
+    {\import{sections/}{languages.tex}}
+
+\pagebreak
+
+\import{sections/}{software.tex}
+\import{sections}{workshops.tex}
+\import{sections}{teaching.tex}
+
+\pagebreak
+
+\import{sections}{reviewer-work.tex}
+\import{sections}{scholarships.tex}
+\import{sections}{societies.tex}
+\import{sections}{extra.tex}
 
 \end{document}
+
+% \documentclass[10pt]{article}
+% \usepackage{amsmath, amsthm, amssymb, amsfonts}
+% \usepackage{multibib}
+% \usepackage{hyperref}
+% \usepackage{import}
+% \usepackage{xpatch}
+% \makeatletter
+% \newcommand\removebibheader
+%   {\xpatchcmd\std@thebibliography
+%     {\section*{\refname}%
+%      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+%     }{}{}{}%
+%   }
+% \makeatother
+
+% \newcommand{\grob}{Gr{\"o}bner }
+% \newcites{publications}{Publications}
+
+% \author{2700 Campus Blvd NE UNM SRC 1385\\
+% Albuquerque, NM 87106\\
+% jabelcastellanosjoo@unm.edu}
+% \title{Jose Abel Castellanos Joo}
+% \date{}
+
+% \begin{document}
+
+% \maketitle
+
+% \import{sections}{personal-statement}
+% \import{sections}{education}
+% \import{sections}{work-experience}
+% \import{sections}{publications}
+% \import{sections}{talks}
+% \import{sections}{software}
+% \import{sections}{workshops}
+% \import{sections}{skills}
+% \import{sections}{teaching}
+% \import{sections}{reviewer-work}
+% \import{sections}{scholarships}
+% \import{sections}{societies}
+% \import{sections}{extra}
+
+% \end{document}
