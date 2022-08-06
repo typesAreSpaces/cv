@@ -11,7 +11,8 @@ cv.pdf: main.pdf
 main.pdf: $(FILES) simplecv.sty
 	latex main
 	#bibtex main.aux
-	bibtex publications.aux
+	#bibtex publications.aux
+	biber main
 	latex main
 	pdflatex main
 
