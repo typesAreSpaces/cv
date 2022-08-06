@@ -61,7 +61,7 @@
 % Shorthand
 \newcommand{\github}[1]{\href{https://github.com/#1/}{#1}}
 \newcommand{\email}[1]{\href{mailto:#1}{#1}}
-\newcommand{\website}[1]{\href{https://www.#1/}{#1}}
+\newcommand{\website}[1]{\url{#1}}
 \newcommand{\linkedin}[1]{\href{https://www.linkedin.com/in/#1/}{#1}}
 
 % Dummy environment
@@ -69,11 +69,11 @@
 
 % Inline heading
 \newcommand{\headinginline}[2]{
-    \begin{minipage}[t]{0.59\textwidth}
+    \begin{minipage}[t]{0.54\textwidth}
     \vspace*{\fill}
     \Huge \textcolor{color-title}{#1}
     \end{minipage}
-    \begin{minipage}[t]{0.4\textwidth}
+    \begin{minipage}[t]{0.45\textwidth}
     \begin{flushright}
     #2
     \end{flushright}
