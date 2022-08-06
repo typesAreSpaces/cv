@@ -142,15 +142,19 @@
   \newcommand*{\boldname}[3]{%
     \def\lastname{#1}%
     \def\firstname{#2}%
-  \def\firstinit{#3}}
+  \def\firstinit{#3}}%
   \boldname{}{}{}
 
   \renewcommand{\mkbibnamegiven}[1]{%
-    \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
-      {\mkbibbold{#1}}{#1}%
-    }
+    \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test%
+        {\ifdefequal{\firstinit}{\namepartgiven}} ) and test%
+        {\ifdefequal{\lastname}{\namepartfamily}} }%
+          {\mkbibbold{#1}}{#1}%
+        }
 
-    \renewcommand{\mkbibnamefamily}[1]{%
-      \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
-        {\mkbibbold{#1}}{#1}%
-      }
+        \renewcommand{\mkbibnamefamily}[1]{%
+          \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test
+              {\ifdefequal{\firstinit}{\namepartgiven}} ) and test
+              {\ifdefequal{\lastname}{\namepartfamily}} }%
+                {\mkbibbold{#1}}{#1}%
+              }

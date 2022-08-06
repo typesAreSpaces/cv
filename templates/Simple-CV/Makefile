@@ -9,6 +9,7 @@ main.pdf: $(FILES)
 	latex main
 	#bibtex main
 	#bibtex publications.aux
+	biber main
 	latex main
 	pdflatex main
 

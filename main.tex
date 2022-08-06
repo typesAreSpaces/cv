@@ -1,7 +1,15 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,13pt]{article}
 
 % Choose bibliography style for formatting list of publications
-\usepackage[backend=biber,style=ieee,url=false,doi=false,maxbibnames=99,sorting=ydnt,dashed=false]{biblatex}
+\usepackage[
+backend=biber,
+style=ieee,
+url=false,
+doi=true,
+maxbibnames=99,
+sorting=ydnt,
+dashed=false
+]{biblatex}
 \bibliography{publications}
 
 % Choose theme, e.g. black, RedViolet, ForestGreen, MidnightBlue
@@ -13,6 +21,7 @@
 % https://commons.wikimedia.org/wiki/File:Kiara_Krit_passport.jpg
 
 \usepackage{simplecv}
+\usepackage{etoolbox}
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
 \usepackage{import}
 \usepackage{xpatch}
@@ -25,9 +34,7 @@
   }
 \makeatother
 
-\newcommand{\grob}{Gr{\"o}bner }
-
-\boldname{Castellanos Joo}{Jose}{J.}
+\boldname{Castellanos Joo}{Jose Abel}{J.}
 
 \begin{document}
 
