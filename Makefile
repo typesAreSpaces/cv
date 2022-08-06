@@ -8,7 +8,7 @@ all: cv.pdf
 cv.pdf: main.pdf
 	cp main.pdf cv.pdf
 
-main.pdf: $(FILES)
+main.pdf: $(FILES) simplecv.sty
 	latex main
 	#bibtex main.aux
 	bibtex publications.aux
