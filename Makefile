@@ -19,10 +19,11 @@ main.pdf: $(FILES) simplecv.sty
 .PHONY: clean
 
 clean:
-	@rubber --clean $(PAPER)
-	@rm -rf main.bbl
-	@rm -rf main.blg
-	@rm -rf main.pdf
+	#@rubber --clean $(PAPER)
+	rm -rf main.bbl
+	rm -rf main.blg
+	rm -rf main.pdf
+	rm -rf cv.pdf
 
 watch:
 	@while true; do inotifywait $(SRC); sleep 0.01; make all; done
