@@ -27,14 +27,14 @@ dashed=false
 \usepackage{xpatch}
 \makeatletter
 \newcommand\removebibheader
-  {\xpatchcmd\std@thebibliography
-    {\section*{\refname}%
-     \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
-    }{}{}{}%
-  }
+{\xpatchcmd\std@thebibliography
+  {\section*{\refname}%
+    \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+  }{}{}{}%
+}
 \makeatother
 \newcommand{\updateinfo}[1][\today]{\par\vfill\hfill{\normalsize\color{MidnightBlue}Last
-    updated on #1}} 
+updated on #1}} 
 
 \boldname{Castellanos Joo}{Jose Abel}{J.}
 
@@ -42,10 +42,10 @@ dashed=false
 
 % Heading
 \headinginline{Jos\'e Abel Castellanos Joo}{
-    Website: \website{www.cs.unm.edu/~jose.castellanosjoo} \\ 
-    Email: \email{jabelcastellanosjoo@unm.edu} \\
-    GitHub: \github{typesAreSpaces} \\
-    LinkedIn: \linkedin{joseabelcj}
+  Website: \website{www.cs.unm.edu/~jose.castellanosjoo} \\ 
+  Email: \email{jcastellanos34@gmail.com} \\
+  GitHub: \github{typesAreSpaces} \\
+  LinkedIn: \linkedin{joseabelcj}
 }
 
 % \headingphoto{Name Surname}{
@@ -69,8 +69,8 @@ dashed=false
 \pagebreak
 
 \sidebyside
-    {\import{sections/}{skills.tex}}
-    {\import{sections/}{languages.tex}}
+{\import{sections/}{skills.tex}}
+{\import{sections/}{languages.tex}}
 \import{sections/}{software.tex}
 \import{sections}{workshops.tex}
 \import{sections}{reviewer-work.tex}
