@@ -5,7 +5,7 @@ FILES=$(wildcard ./*.tex) $(wildcard ./sections/*.tex)
 ENGINE=pdflatex
 
 all: cv.pdf
-	while sleep 1; do ls *.tex | entr make $(OUTPUT); done
+	
 
 cv.pdf: $(OUTPUT)
 	@cp $(OUTPUT) cv.pdf

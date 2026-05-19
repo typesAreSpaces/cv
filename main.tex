@@ -35,6 +35,7 @@ dashed=false
 \makeatother
 \newcommand{\updateinfo}[1][\today]{\par\vfill\hfill{\normalsize\color{MidnightBlue}Last
 updated on #1}} 
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu #1 \mkern-1.5mu}\mkern 1.5mu}
 
 \boldname{Castellanos Joo}{Jose Abel}{J.}
 
@@ -42,7 +43,7 @@ updated on #1}}
 
 % Heading
 \headinginline{Jos\'e Abel Castellanos Joo}{
-  Website: \website{www.cs.unm.edu/~jose.castellanosjoo} \\ 
+  Website: \website{https://jcastellanosjoo.github.io/} \\ 
   Email: \email{jcastellanos34@gmail.com} \\
   GitHub: \github{typesAreSpaces} \\
   LinkedIn: \linkedin{joseabelcj}
@@ -65,8 +66,6 @@ updated on #1}}
 \import{sections/}{talks.tex}
 \import{sections/}{teaching.tex}
 \import{sections/}{mentorship.tex}
-
-\pagebreak
 
 \sidebyside
 {\import{sections/}{skills.tex}}
